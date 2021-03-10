@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "一沙后台管理系统 - 登录";
+    ViewBag.Title = "百特瑞后台管理系统 - 登录";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment HostingEnvironment
@@ -8,15 +8,26 @@
     <script>
         if (window.top !== window.self) { window.top.location = window.location };
     </script>
+    <style type="text/css">
+        .title-big {
+            float: left;
+            color: #FFFFFF;
+            font-size: 24px;
+            font-weight: 600;
+            padding: 17px 20px;
+            text-align: center;
+            text-shadow: 2px 2px 3px #222222;
+            background-color: #2B6695;
+            width: 100%;
+        }
+    </style>
     @BundlerHelper.Render(HostingEnvironment.ContentRootPath, Url.Content("~/lib/jquery.validation/1.14.0/jquery.validate.min.js"))
 }
 <div class="login-panel">
     <div class="row section">
         <div class="col-sm-12">
             <form id="form">
-                <h4 class="no-margin">登录：</h4>
-                <p class="m-t-md">一沙一世界，一叶一菩提</p>
-                <p>用户名：admin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密码：123456</p>
+                <h1 class="title-big">百特瑞后台管理系统</h1>
                 <input id="userName" name="userName" class="form-control uname" col="UserName" type="text" placeholder="用户名" value="@ViewBag.UserName" />
                 <input id="password" name="password" class="form-control pword m-b" col="Password" type="password" placeholder="密码" value="@ViewBag.Password" />
                 <div class="row">
